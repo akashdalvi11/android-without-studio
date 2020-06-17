@@ -1,0 +1,40 @@
+buildscript{
+	repositories{
+		google()
+		jcenter()
+	}
+	dependencies{
+		classpath "com.android.tools.build:gradle:4.0.0"
+	}
+}
+
+apply plugin : 'com.android.application'
+    
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        minSdkVersion 27
+	versionCode 1
+	}
+	sourceSets{
+		main{
+			java.srcDirs = ['./java']
+			res.srcDirs = ['./res']
+			manifest.srcFile './AndroidManifest.xml'
+		}
+	}
+}
+
+repositories {
+        google()
+        jcenter()
+}
+
+dependencies {
+     
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+}
